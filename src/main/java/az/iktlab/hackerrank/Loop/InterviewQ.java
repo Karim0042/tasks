@@ -10,14 +10,14 @@ public class InterviewQ {
         Integer[] tmp = new Integer[index.length];
         for (int i = 0; i < 3; i++) {
             int temp = 0;
-            System.out.print(arr[i][index[temp] % 3] + " ");
+            System.out.print(arr[i][index[temp]] + " ");
             temp++;
-            System.out.print(arr[i][index[temp] % 3] + " ");//2,5
+            System.out.print(arr[i][index[temp]] + " ");//2,5
             temp++;
-            System.out.print(arr[i][index[temp] % 3] + " ");//3,
+            System.out.print(arr[i][index[temp]] + " ");//3,
             tmp = index;
             index = step;
-            step = index;
+            step = tmp;
             //Collections.reverse(Arrays.asList(index));
 
         }
