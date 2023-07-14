@@ -7,7 +7,18 @@ public class InterviewQ {
            Scanner sc  =new Scanner(System.in);
            int n  = sc.nextInt();
            int c =n,d=1,z=0;
-        for (int i = 0; i < 2*n; i++) {
+           String rep ="* ";
+           String bs =" ";
+        for (int i = 1; i <= 2*n; i++) {
+            if (i<=n) {
+                System.out.println(bs.repeat(n - i) + rep.repeat(i));
+            }else {
+                System.out.println(bs.repeat(z) + rep.repeat(c));
+                z++;
+                c--;
+            }
+        }
+        /*for (int i = 0; i < 2*n; i++) {
             if (i<n) {
                 c--;
             }else {
@@ -30,7 +41,7 @@ public class InterviewQ {
             }
             System.out.println();
 
-        }
+        }*/
 
         }
     }
