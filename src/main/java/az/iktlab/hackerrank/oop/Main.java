@@ -1,5 +1,7 @@
 package az.iktlab.hackerrank.oop;
 
+import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) {
         Family f = new Family(new Human("solmaz", "asadova", 1980, 100, null), new Human("Rahim", "rhov", 1978, 123, null));
@@ -9,7 +11,10 @@ public class Main {
         f.addChild(new Human("kazim3","rmov",2004,140,null));
         f.deleteChildByIndex(0);
         f.deleteChild(new Human("kazim3","rmov",2004,140,null));
+
+        f.setPet(new Pet(Species.BIRD,"sc",1,2,null));
         System.out.println(f);
+        System.out.println(Arrays.toString(DayOfWeek.values()));
 
     }
 }

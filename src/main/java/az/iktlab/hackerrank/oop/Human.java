@@ -4,11 +4,11 @@ import java.util.Arrays;
 import java.util.Objects;
 
 public  class Human {
-    private String name="name";
-    private String surname="surname";
-    private int year=0;
-    private int iq=0;
-    public String[][] schedule={{"day", "task"}, {"day_2", "task_2"}};
+    private String name;
+    private String surname;
+    private int year;
+    private int iq;
+    public String[][] schedule = new String[7][2];
 
     public Human(String name,String surname,int year,int iq,String[][]schedule) {
         this.name = name;
@@ -42,5 +42,16 @@ public  class Human {
         int result = Objects.hash(name, surname, year, iq);
         result = 31 * result + Arrays.hashCode(schedule);
         return result;
+    }
+    @Override
+    public void finalize() throws Throwable {
+        System.out.println("object is removing");
+    }
+    public void name(){
+        int i=0;
+        for (DayOfWeek dayOfWeek:DayOfWeek.values()) {
+            this.schedule[i][0] = dayOfWeek.name();
+            this.schedule[i][1] = "task_"+i;
+        }
     }
 }

@@ -108,4 +108,12 @@ public class Family {
                 ", children=" + Arrays.toString(children) +
                 '}';
     }
+    @Override
+    protected void finalize() throws Throwable {
+        System.out.println("object is removing");
+    }
+
+    public void setPet(Pet pet) {
+        this.pet = pet;
+    }
 }

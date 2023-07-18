@@ -5,19 +5,19 @@ import java.util.Arrays;
 public class Pet {
 
 
-    public String species;
+    public Species species;
     public String nickName;
     public int age;
     public int trickLevel;
     public String[] habits;
 
-    public Pet(){}
+    //public Pet(Species bird){}
 
     public Pet(String nickName){
         this.nickName=nickName;
     }
 
-    public Pet(String species, String nickName, int age, int trickLevel, String[] habits) {
+    public Pet(Species species, String nickName, int age, int trickLevel, String[] habits) {
         this.species = species;
         this.nickName = nickName;
         this.age = age;
@@ -38,10 +38,20 @@ public class Pet {
     }
 
     @Override
+    protected void finalize() throws Throwable {
+        System.out.println("object is removing");
+    }
+
+
+
+
+    @Override
     public String toString() {
 
         return "Pet{" +
-                "species='" + species + '\'' +
+                "iscanfly'" + species.isCanFly() + '\'' +"" +
+                "numberOfLegs = "+ species.getNumberOfLegs() + '\'' +""+
+                "isFur = "+ species.isHasFur() + '\'' +""+
                 ", nickName='" + nickName + '\'' +
                 ", age=" + age +
                 ", trickLevel=" + trickLevel +
