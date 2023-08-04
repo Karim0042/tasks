@@ -1,4 +1,4 @@
-package az.iktlab.hackerrank.oop;
+package az.iktlab.hackerrank.oop.enums;
 
 import java.time.MonthDay;
 

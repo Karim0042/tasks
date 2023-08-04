@@ -1,5 +1,7 @@
 package az.iktlab.hackerrank.oop;
 
+import az.iktlab.hackerrank.oop.enums.DayOfWeek;
+
 import java.util.Arrays;
 import java.util.Objects;
 
@@ -9,7 +11,7 @@ public  class Human {
     private int year;
     private int iq;
     public String[][] schedule = new String[7][2];
-
+    public Human(){}
     public Human(String name,String surname,int year,int iq,String[][]schedule) {
         this.name = name;
         this.surname = surname;
@@ -27,6 +29,22 @@ public  class Human {
                 ", iq=" + iq +
                 ", schedule=" + Arrays.toString(schedule) +
                 '}';
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getIq() {
+        return iq;
+    }
+
+    public void setIq(int iq) {
+        this.iq = iq;
     }
 
     @Override

@@ -1,5 +1,8 @@
 package az.iktlab.hackerrank.oop;
 
+import az.iktlab.hackerrank.oop.enums.DayOfWeek;
+import az.iktlab.hackerrank.oop.enums.Species;
+
 import java.util.Arrays;
 
 public class Main {

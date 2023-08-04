@@ -1,9 +1,11 @@
 package az.iktlab.hackerrank.oop;
 
+import az.iktlab.hackerrank.oop.inter.HumanCreator;
+
 import java.util.Arrays;
 import java.util.Random;
 
-public class Family {
+public class Family implements HumanCreator {
 
     private Pet pet;
 
@@ -115,5 +117,20 @@ public class Family {
 
     public void setPet(Pet pet) {
         this.pet = pet;
+    }
+
+    @Override
+    public void bornChild() {
+        Random rnd = new Random();
+        String[] arrayOfMan = {"aydin", "zakir", "Kerim", "rasim", "xeyal"};
+        String[] arrayOfWoman = {"Aysun", "aysel", "LCwaikiki", "Zara"};
+
+        boolean isMale = rnd.nextBoolean();
+
+        Human child = isMale ? new Man():new Woman();
+        String name = isMale ? arrayOfMan[rnd.nextInt(arrayOfMan.length)]: arrayOfWoman[rnd.nextInt(arrayOfWoman.length)];
+        child.setName(name);
+        this.addChild(child);
+        child.setIq((this.father.getIq() + this.mother.getIq()) / 2);
     }
 }

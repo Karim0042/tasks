@@ -1,8 +1,10 @@
 package az.iktlab.hackerrank.oop;
 
+import az.iktlab.hackerrank.oop.enums.Species;
+
 import java.util.Arrays;
 
-public class Pet {
+public abstract class Pet {
 
 
     public Species species;
@@ -11,7 +13,7 @@ public class Pet {
     public int trickLevel;
     public String[] habits;
 
-    //public Pet(Species bird){}
+    public Pet(){}
 
     public Pet(String nickName){
         this.nickName=nickName;
@@ -24,17 +26,17 @@ public class Pet {
         this.trickLevel = trickLevel;
         this.habits = habits;
     }
-
+    public abstract void respond();
     public void eat(){
         System.out.println("I am eating");
     }
 
-    public void respond(){
-        System.out.println("Helo owner. I am -"+this.nickName+"."+" I miss you!");
+    public Species getSpecies() {
+        return species;
     }
 
-    public void foul(){
-        System.out.println("I need to cover it up");
+    public void setSpecies(Species species) {
+        this.species = species;
     }
 
     @Override
