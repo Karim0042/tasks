@@ -1,6 +1,4 @@
-package az.iktlab.hackerrank.oop.enums;
-
-import java.time.MonthDay;
+package az.iktlab.hackerrank.minifamily.enums;
 
 public enum DayOfWeek {
       MONDAY

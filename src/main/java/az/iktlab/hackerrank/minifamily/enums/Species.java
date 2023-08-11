@@ -1,4 +1,4 @@
-package az.iktlab.hackerrank.oop.enums;
+package az.iktlab.hackerrank.minifamily.enums;
 
 public enum Species {
     CAT(false, 4, true),

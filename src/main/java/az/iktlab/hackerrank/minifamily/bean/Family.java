@@ -1,6 +1,6 @@
-package az.iktlab.hackerrank.oop;
+package az.iktlab.hackerrank.minifamily.bean;
 
-import az.iktlab.hackerrank.oop.inter.HumanCreator;
+import az.iktlab.hackerrank.minifamily.inter.HumanCreator;
 
 import java.util.Arrays;
 import java.util.Random;
@@ -110,10 +110,10 @@ public class Family implements HumanCreator {
                 ", children=" + Arrays.toString(children) +
                 '}';
     }
-    @Override
+    /*@Override
     protected void finalize() throws Throwable {
         System.out.println("object is removing");
-    }
+    }*/
 
     public void setPet(Pet pet) {
         this.pet = pet;

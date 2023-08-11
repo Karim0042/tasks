@@ -1,6 +1,8 @@
-package az.iktlab.hackerrank.oop;
+package az.iktlab.hackerrank.minifamily.bean;
 
-public class Man extends Human{
+import az.iktlab.hackerrank.minifamily.bean.Human;
+
+public class Man extends Human {
     public void repairCar(){
         System.out.println("Man's repairing car");
     }

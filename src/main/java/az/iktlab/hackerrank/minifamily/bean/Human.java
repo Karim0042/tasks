@@ -1,6 +1,6 @@
-package az.iktlab.hackerrank.oop;
+package az.iktlab.hackerrank.minifamily.bean;
 
-import az.iktlab.hackerrank.oop.enums.DayOfWeek;
+import az.iktlab.hackerrank.minifamily.enums.DayOfWeek;
 
 import java.util.Arrays;
 import java.util.Objects;
@@ -61,10 +61,10 @@ public  class Human {
         result = 31 * result + Arrays.hashCode(schedule);
         return result;
     }
-    @Override
+    /*@Override
     public void finalize() throws Throwable {
         System.out.println("object is removing");
-    }
+    }*/
     public void name(){
         int i=0;
         for (DayOfWeek dayOfWeek:DayOfWeek.values()) {

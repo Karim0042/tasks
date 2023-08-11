@@ -1,7 +1,8 @@
-package az.iktlab.hackerrank.oop;
+package az.iktlab.hackerrank.minifamily.bean;
 
-import az.iktlab.hackerrank.oop.enums.DayOfWeek;
-import az.iktlab.hackerrank.oop.enums.Species;
+import az.iktlab.hackerrank.minifamily.animals.DomesticCat;
+import az.iktlab.hackerrank.minifamily.enums.DayOfWeek;
+import az.iktlab.hackerrank.minifamily.enums.Species;
 
 import java.util.Arrays;
 
@@ -15,7 +16,7 @@ public class Main {
         f.deleteChildByIndex(0);
         f.deleteChild(new Human("kazim3","rmov",2004,140,null));
 
-        f.setPet(new Pet(Species.BIRD,"sc",1,2,null));
+        f.setPet(new DomesticCat());
         System.out.println(f);
         System.out.println(Arrays.toString(DayOfWeek.values()));
 

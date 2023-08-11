@@ -1,6 +1,6 @@
-package az.iktlab.hackerrank.oop;
+package az.iktlab.hackerrank.minifamily.bean;
 
-import az.iktlab.hackerrank.oop.enums.Species;
+import az.iktlab.hackerrank.minifamily.enums.Species;
 
 import java.util.Arrays;
 
@@ -39,10 +39,10 @@ public abstract class Pet {
         this.species = species;
     }
 
-    @Override
+    /*@Override
     protected void finalize() throws Throwable {
         System.out.println("object is removing");
-    }
+    }*/
 
 
 
