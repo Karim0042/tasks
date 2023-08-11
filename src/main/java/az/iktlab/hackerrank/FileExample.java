@@ -1,4 +1,4 @@
-package az.iktlab;
+package az.iktlab.hackerrank;
 
 import az.iktlab.hackerrank.Prsn;
 

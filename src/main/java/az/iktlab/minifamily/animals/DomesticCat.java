@@ -1,7 +1,6 @@
-package az.iktlab.hackerrank.minifamily.animals;
+package az.iktlab.minifamily.animals;
 
-import az.iktlab.hackerrank.minifamily.bean.Pet;
-import az.iktlab.hackerrank.minifamily.enums.Species;
+import az.iktlab.minifamily.enums.Species;
 
 public class DomesticCat extends Pet  {
     public DomesticCat(){

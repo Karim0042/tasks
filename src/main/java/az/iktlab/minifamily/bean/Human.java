@@ -1,8 +1,9 @@
-package az.iktlab.hackerrank.minifamily.bean;
+package az.iktlab.minifamily.bean;
 
-import az.iktlab.hackerrank.minifamily.enums.DayOfWeek;
+import az.iktlab.minifamily.enums.DayOfWeek;
 
 import java.util.Arrays;
+import java.util.Map;
 import java.util.Objects;
 
 public  class Human {
@@ -10,9 +11,9 @@ public  class Human {
     private String surname;
     private int year;
     private int iq;
-    public String[][] schedule = new String[7][2];
+    public Map<DayOfWeek,String>schedule;
     public Human(){}
-    public Human(String name,String surname,int year,int iq,String[][]schedule) {
+    public Human(String name,String surname,int year,int iq,Map<DayOfWeek,String>schedule) {
         this.name = name;
         this.surname = surname;
         this.year = year;
@@ -27,7 +28,7 @@ public  class Human {
                 ", surname='" + surname + '\'' +
                 ", year=" + year +
                 ", iq=" + iq +
-                ", schedule=" + Arrays.toString(schedule) +
+                ", schedule=" + schedule +
                 '}';
     }
 
@@ -52,24 +53,22 @@ public  class Human {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Human human = (Human) o;
-        return year == human.year && iq == human.iq && name.equals(human.name) && surname.equals(human.surname) && Arrays.equals(schedule, human.schedule);
+        return year == human.year && iq == human.iq && name.equals(human.name) && surname.equals(human.surname) ;
     }
 
     @Override
     public int hashCode() {
-        int result = Objects.hash(name, surname, year, iq);
-        result = 31 * result + Arrays.hashCode(schedule);
-        return result;
+        return super.hashCode();
     }
-    /*@Override
+
+    @Override
     public void finalize() throws Throwable {
         System.out.println("object is removing");
-    }*/
+    }
     public void name(){
         int i=0;
         for (DayOfWeek dayOfWeek:DayOfWeek.values()) {
-            this.schedule[i][0] = dayOfWeek.name();
-            this.schedule[i][1] = "task_"+i;
+
         }
     }
 }

@@ -1,17 +1,17 @@
-package az.iktlab.hackerrank.minifamily.bean;
+package az.iktlab.minifamily.animals;
 
-import az.iktlab.hackerrank.minifamily.enums.Species;
+import az.iktlab.minifamily.enums.Species;
 
 import java.util.Arrays;
+import java.util.Set;
 
 public abstract class Pet {
 
-
-    public Species species;
-    public String nickName;
-    public int age;
-    public int trickLevel;
-    public String[] habits;
+    protected Species species;
+    protected String nickName;
+    protected int age;
+    protected int trickLevel;
+    protected Set<String>habits;
 
     public Pet(){}
 
@@ -19,7 +19,7 @@ public abstract class Pet {
         this.nickName=nickName;
     }
 
-    public Pet(Species species, String nickName, int age, int trickLevel, String[] habits) {
+    public Pet(Species species, String nickName, int age, int trickLevel,Set<String>habits) {
         this.species = species;
         this.nickName = nickName;
         this.age = age;
@@ -39,13 +39,10 @@ public abstract class Pet {
         this.species = species;
     }
 
-    /*@Override
+    @Override
     protected void finalize() throws Throwable {
         System.out.println("object is removing");
-    }*/
-
-
-
+    }
 
     @Override
     public String toString() {
@@ -57,7 +54,7 @@ public abstract class Pet {
                 ", nickName='" + nickName + '\'' +
                 ", age=" + age +
                 ", trickLevel=" + trickLevel +
-                ", habits=" + Arrays.toString(habits) +
+                ", habits=" + habits +
                 '}';
 
     }

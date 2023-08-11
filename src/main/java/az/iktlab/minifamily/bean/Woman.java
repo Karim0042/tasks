@@ -1,6 +1,4 @@
-package az.iktlab.hackerrank.minifamily.bean;
-
-import az.iktlab.hackerrank.minifamily.bean.Human;
+package az.iktlab.minifamily.bean;
 
 public class Woman extends Human {
 

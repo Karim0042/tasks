@@ -1,8 +1,7 @@
-package az.iktlab.hackerrank.minifamily.animals;
+package az.iktlab.minifamily.animals;
 
-import az.iktlab.hackerrank.minifamily.bean.Pet;
-import az.iktlab.hackerrank.minifamily.enums.Species;
-import az.iktlab.hackerrank.minifamily.inter.Foul;
+import az.iktlab.minifamily.enums.Species;
+import az.iktlab.minifamily.inter.Foul;
 
 public class Dog extends Pet implements Foul {
     public Dog() {

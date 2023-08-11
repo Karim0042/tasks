@@ -1,6 +1,4 @@
-package az.iktlab.hackerrank.minifamily.bean;
-
-import az.iktlab.hackerrank.minifamily.bean.Human;
+package az.iktlab.minifamily.bean;
 
 public class Man extends Human {
     public void repairCar(){
